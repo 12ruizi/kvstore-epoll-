@@ -1,0 +1,3 @@
+/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles/kvstore.dir
+/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles/edit_cache.dir
+/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles/rebuild_cache.dir
