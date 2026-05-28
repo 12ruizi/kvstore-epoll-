@@ -1,5 +1,6 @@
 #ifndef __PROTOCOL_PARSER_H__
 #define __PROTOCOL_PARSER_H__
+#include "Request.h"
 #include <functional>
 #include <iostream>
 #include <map>
@@ -22,15 +23,6 @@ struct http_method_Url {
     }
   };
 };
-//数据流的处理（协议的解析）
-//数据流的调度器 利用策略模式来处理不同的任务
-// #define REGISTER_PARSER(signature, parser_class) \
-//   static bool register_##parser_class = []() { \
-//     parserFactory::get_parser_factory().register_parser( \
-//         signature, []() { return std::make_shared<parser_class>(); }); \
-//     return true; \
-//   }();
-
 class ProtocolParser { //协议解析基类
 public:
   virtual ~ProtocolParser(){};
@@ -53,23 +45,8 @@ private:
   std::string URL(ConnectionInfo *info);
 
 public:
-  static std::map<http_method_Url, std::function<void()>>
-      HTTP_handler_map; // HTTP请求处理函数映射
-
-  static bool register_handler(const std::string &method,
-                               const std::string &url,
-                               std::function<void()> handler) {
-    if (method.empty() || url.empty()) {
-      return false;
-    }
-    std::unique_ptr<http_method_Url> key = std::make_unique<http_method_Url>();
-    key->method = method;
-    key->url = url;
-    HTTP_handler_map[*key] = handler;
-    std::cout << "已经注册HTTP方法的处理函数：" << method << std::endl;
-    return true;
-  }
   bool parse(ConnectionInfo *info) override;
+
   bool handle(ConnectionInfo *info) override;
 };
 
@@ -77,12 +54,10 @@ class parserFactory { //协议解析器工厂类
 private:
   std::map<std::string, std::function<std::unique_ptr<ProtocolParser>()>>
       _registry_map_;
-  size_t _max_signature_length;
+  size_t _max_signature_length = 20;
   parserFactory() = default;
 
 public:
-  static std::map<http_method_Url, std::function<void()>>
-      HTTP_handler_map; // HTTP请求处理函数映射
   //获取全局唯一的工厂实例
   static parserFactory &get_parser_factory() {
     static parserFactory parser_factory;
@@ -94,4 +69,18 @@ public:
                   std::function<std::unique_ptr<ProtocolParser>()> creator);
   std::unique_ptr<ProtocolParser> get_parser(ConnectionInfo &info);
 };
+
+#define REGISTER_PARSER(name, creator)                                         \
+  static std::unique_ptr<ProtocolParser> creator##Factory() {                  \
+    return std::make_unique<creator>();                                        \
+  }                                                                            \
+                                                                               \
+  static struct Register_##name {                                              \
+    Register_##name() {                                                        \
+      parserFactory::get_parser_factory().register_parser(#name,               \
+                                                          creator##Factory);   \
+      std::cout << "自动注册协议解析器: " << #name << std::endl;               \
+    }                                                                          \
+  } g_register_##name;
+
 #endif // __PROTOCOL_PARSER_H__

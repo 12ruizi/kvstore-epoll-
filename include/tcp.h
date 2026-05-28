@@ -21,17 +21,18 @@ private:
     addr.sin_addr.s_addr = htonl(INADDR_ANY);
     addr.sin_port = htons(_port);
     int ret = -1;
-    ret = bind(_socket_fd, (struct sockaddr *)&addr, sizeof(addr));
-    if (ret < 0) {
-      perror("bind");
-      return ret;
-    }
     int opt = 1;
     ret = setsockopt(_socket_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
     if (ret < 0) {
       perror("setsockopt");
       return ret;
     }
+    ret = bind(_socket_fd, (struct sockaddr *)&addr, sizeof(addr));
+    if (ret < 0) {
+      perror("bind");
+      return ret;
+    }
+
     ret = listen(_socket_fd, 1);
     if (ret < 0) {
       perror("listen");

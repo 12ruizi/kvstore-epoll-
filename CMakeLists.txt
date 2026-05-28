@@ -34,5 +34,5 @@ target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)
 
 # 添加编译选项
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-    target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -g)
+    target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -g -pthread)
 endif()

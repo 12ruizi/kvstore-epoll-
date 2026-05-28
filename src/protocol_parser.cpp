@@ -1,6 +1,9 @@
-
 #include "protocol_parser.h"
 #include "connect_info.h"
+#include "http_task.h"
+#include <algorithm>
+#include <iostream>
+REGISTER_PARSER(GET, HttpParser);
 ParseResult HttpParser::is_complete_message(ConnectionInfo *info) {
   size_t read_size = info->read_buffer.used_size();
   if (read_size == 0) {
@@ -38,8 +41,6 @@ ParseResult HttpParser::is_complete_message(ConnectionInfo *info) {
   }
   return ParseResult::COMPLETE;
 }
-std::map<http_method_Url, std::function<void()>>
-    HttpParser::HTTP_handler_map; // HTTP请求处理函数映射
 //头部指针，数据指针，
 char *HttpParser::Head(ConnectionInfo *info) {
   std::string_view request(info->read_buffer.get_buffer() +
@@ -93,22 +94,21 @@ std::string HttpParser::URL(ConnectionInfo *info) {
 bool HttpParser::parse(ConnectionInfo *info) {
   ParseResult result = is_complete_message(info);
   if (result == ParseResult::NEEED_MORE_DATA) {
+
     return false;
   }
   return true;
 }
 
 bool HttpParser::handle(ConnectionInfo *info) {
-  //处理请求
-  std::string method = Method(info);
-  std::string url = URL(info);
-  http_method_Url key{method, url};
-  if (HTTP_handler_map.find(key) != HTTP_handler_map.end()) {
-    HTTP_handler_map[key]();
-  } else {
-    std::cout << "未注册该方法的处理函数：" << method << std::endl;
-  }
-
+  std::cout << "http parser handle" << std::endl;
+  auto requeset = std::make_unique<HttpRequest>();
+  requeset->_method = Method(info);
+  requeset->_url = URL(info);
+  requeset->_version = "HTTP/1.1";
+  requeset->_data = Data(info);
+  info->_request = std::move(requeset);
+  std::cout << "http" << std::endl;
   return true;
 };
 
@@ -118,12 +118,12 @@ void parserFactory::register_parser(
     std::function<std::unique_ptr<ProtocolParser>()> creator) {
   _registry_map_[protocol_name] = creator;
   std::cout << "已经注册协议特征编码：" << protocol_name << std::endl;
-  _max_signature_length = std::max(_max_signature_length, protocol_name.size());
 }
 
 std::unique_ptr<ProtocolParser>
 parserFactory::get_parser(ConnectionInfo &info) {
   if (info.read_buffer.used_size() == 0) {
+    std::cout << "read_buffer is empty" << std::endl;
     return nullptr;
   }
   size_t len = std::min(static_cast<size_t>(info.read_buffer.used_size()),
@@ -132,10 +132,13 @@ parserFactory::get_parser(ConnectionInfo &info) {
     //字符串视图
     std::string_view prefix(
         info.read_buffer.get_buffer() + info.read_buffer.get_head(), len);
-    auto it = _registry_map_.find(prefix.data());
+    std::cout << "prefix :" << prefix << std::endl;
+    //这里缀，可能特征缀，可能特征在前缀的后面
+    auto it = _registry_map_.find(std::string(prefix));
     if (it != _registry_map_.end()) {
       return it->second();
     }
   }
+  std::cout << "no parser found" << std::endl;
   return nullptr;
 }

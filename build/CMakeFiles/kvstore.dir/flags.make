@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/rui/share/warehouse/1精匠/kvstore/include
 
-CXX_FLAGS = -Wall -Wextra -g -std=gnu++20
+CXX_FLAGS = -Wall -Wextra -g -pthread -std=gnu++20
 

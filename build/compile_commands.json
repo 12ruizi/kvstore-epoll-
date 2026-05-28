@@ -1,22 +1,22 @@
 [
 {
   "directory": "/home/rui/share/warehouse/1精匠/kvstore/build",
-  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -Wall -Wextra -g -std=gnu++20 -o CMakeFiles/kvstore.dir/src/hash.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/hash.cpp",
+  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/src/hash.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/hash.cpp",
   "file": "/home/rui/share/warehouse/1精匠/kvstore/src/hash.cpp"
 },
 {
   "directory": "/home/rui/share/warehouse/1精匠/kvstore/build",
-  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -Wall -Wextra -g -std=gnu++20 -o CMakeFiles/kvstore.dir/src/kvstore.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/kvstore.cpp",
+  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/src/kvstore.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/kvstore.cpp",
   "file": "/home/rui/share/warehouse/1精匠/kvstore/src/kvstore.cpp"
 },
 {
   "directory": "/home/rui/share/warehouse/1精匠/kvstore/build",
-  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -Wall -Wextra -g -std=gnu++20 -o CMakeFiles/kvstore.dir/src/main.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/main.cpp",
+  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/src/main.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/main.cpp",
   "file": "/home/rui/share/warehouse/1精匠/kvstore/src/main.cpp"
 },
 {
   "directory": "/home/rui/share/warehouse/1精匠/kvstore/build",
-  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -Wall -Wextra -g -std=gnu++20 -o CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/protocol_parser.cpp",
+  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/protocol_parser.cpp",
   "file": "/home/rui/share/warehouse/1精匠/kvstore/src/protocol_parser.cpp"
 }
 ]
