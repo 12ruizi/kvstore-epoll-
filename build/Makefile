@@ -129,53 +129,77 @@ kvstore/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/build
 .PHONY : kvstore/fast
 
-src/hash.o: src/hash.cpp.o
-.PHONY : src/hash.o
+kv_core/hash.o: kv_core/hash.cpp.o
+.PHONY : kv_core/hash.o
 
 # target to build an object file
-src/hash.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/hash.cpp.o
-.PHONY : src/hash.cpp.o
+kv_core/hash.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/kv_core/hash.cpp.o
+.PHONY : kv_core/hash.cpp.o
 
-src/hash.i: src/hash.cpp.i
-.PHONY : src/hash.i
+kv_core/hash.i: kv_core/hash.cpp.i
+.PHONY : kv_core/hash.i
 
 # target to preprocess a source file
-src/hash.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/hash.cpp.i
-.PHONY : src/hash.cpp.i
+kv_core/hash.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/kv_core/hash.cpp.i
+.PHONY : kv_core/hash.cpp.i
 
-src/hash.s: src/hash.cpp.s
-.PHONY : src/hash.s
+kv_core/hash.s: kv_core/hash.cpp.s
+.PHONY : kv_core/hash.s
 
 # target to generate assembly for a file
-src/hash.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/hash.cpp.s
-.PHONY : src/hash.cpp.s
+kv_core/hash.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/kv_core/hash.cpp.s
+.PHONY : kv_core/hash.cpp.s
 
-src/kvstore.o: src/kvstore.cpp.o
-.PHONY : src/kvstore.o
+kv_core/kvstore.o: kv_core/kvstore.cpp.o
+.PHONY : kv_core/kvstore.o
 
 # target to build an object file
-src/kvstore.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/kvstore.cpp.o
-.PHONY : src/kvstore.cpp.o
+kv_core/kvstore.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o
+.PHONY : kv_core/kvstore.cpp.o
 
-src/kvstore.i: src/kvstore.cpp.i
-.PHONY : src/kvstore.i
+kv_core/kvstore.i: kv_core/kvstore.cpp.i
+.PHONY : kv_core/kvstore.i
 
 # target to preprocess a source file
-src/kvstore.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/kvstore.cpp.i
-.PHONY : src/kvstore.cpp.i
+kv_core/kvstore.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.i
+.PHONY : kv_core/kvstore.cpp.i
 
-src/kvstore.s: src/kvstore.cpp.s
-.PHONY : src/kvstore.s
+kv_core/kvstore.s: kv_core/kvstore.cpp.s
+.PHONY : kv_core/kvstore.s
 
 # target to generate assembly for a file
-src/kvstore.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/kvstore.cpp.s
-.PHONY : src/kvstore.cpp.s
+kv_core/kvstore.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.s
+.PHONY : kv_core/kvstore.cpp.s
+
+log/log.o: log/log.cpp.o
+.PHONY : log/log.o
+
+# target to build an object file
+log/log.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/log/log.cpp.o
+.PHONY : log/log.cpp.o
+
+log/log.i: log/log.cpp.i
+.PHONY : log/log.i
+
+# target to preprocess a source file
+log/log.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/log/log.cpp.i
+.PHONY : log/log.cpp.i
+
+log/log.s: log/log.cpp.s
+.PHONY : log/log.s
+
+# target to generate assembly for a file
+log/log.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/log/log.cpp.s
+.PHONY : log/log.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -234,12 +258,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... kvstore"
-	@echo "... src/hash.o"
-	@echo "... src/hash.i"
-	@echo "... src/hash.s"
-	@echo "... src/kvstore.o"
-	@echo "... src/kvstore.i"
-	@echo "... src/kvstore.s"
+	@echo "... kv_core/hash.o"
+	@echo "... kv_core/hash.i"
+	@echo "... kv_core/hash.s"
+	@echo "... kv_core/kvstore.o"
+	@echo "... kv_core/kvstore.i"
+	@echo "... kv_core/kvstore.s"
+	@echo "... log/log.o"
+	@echo "... log/log.i"
+	@echo "... log/log.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

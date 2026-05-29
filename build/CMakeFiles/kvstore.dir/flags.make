@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/rui/share/warehouse/1精匠/kvstore/include
+CXX_INCLUDES = -I/home/rui/share/warehouse/1精匠/kvstore/include -I/home/rui/share/warehouse/1精匠/kvstore/log -I/home/rui/share/warehouse/1精匠/kvstore/kv_core
 
 CXX_FLAGS = -Wall -Wextra -g -pthread -std=gnu++20
 

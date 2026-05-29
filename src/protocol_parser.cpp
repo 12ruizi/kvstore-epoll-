@@ -3,7 +3,7 @@
 #include "http_task.h"
 #include <algorithm>
 #include <iostream>
-REGISTER_PARSER(GET, HttpParser);
+REGISTER_PARSER(POST, HttpParser);
 ParseResult HttpParser::is_complete_message(ConnectionInfo *info) {
   size_t read_size = info->read_buffer.used_size();
   if (read_size == 0) {

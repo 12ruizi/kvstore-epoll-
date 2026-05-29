@@ -242,6 +242,10 @@ CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/c++/11/atomic \
  /home/rui/share/warehouse/1精匠/kvstore/include/http_task.h \
+ /home/rui/share/warehouse/1精匠/kvstore/include/../kv_core/kvstore.h \
+ /home/rui/share/warehouse/1精匠/kvstore/include/../kv_core/../include/connect_info.h \
+ /usr/include/assert.h /usr/include/c++/11/stdlib.h /usr/include/string.h \
+ /usr/include/strings.h \
  /home/rui/share/warehouse/1精匠/kvstore/include/Router.h \
  /home/rui/share/warehouse/1精匠/kvstore/include/connect_info.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/ranges_algo.h \

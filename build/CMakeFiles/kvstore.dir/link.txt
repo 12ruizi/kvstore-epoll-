@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/kvstore.dir/src/hash.cpp.o CMakeFiles/kvstore.dir/src/kvstore.cpp.o CMakeFiles/kvstore.dir/src/main.cpp.o CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o -o kvstore 
+/usr/bin/c++ CMakeFiles/kvstore.dir/kv_core/hash.cpp.o CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o CMakeFiles/kvstore.dir/log/log.cpp.o CMakeFiles/kvstore.dir/src/main.cpp.o CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o -o kvstore 

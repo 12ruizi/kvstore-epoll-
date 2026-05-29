@@ -1,5 +1,7 @@
 #ifndef __SERVER_H__
 #define __SERVER_H__
+#include "../kv_core/kvstore.h"
+#include "../log/log.h"
 #include "Request.h"
 #include "Router.h"
 #include "connect_info.h"
@@ -7,6 +9,7 @@
 #include "kvstore.h"
 #include "protocol_parser.h"
 #include "tcp.h"
+#include "threads_pool.h"
 #include <sys/epoll.h>
 #define MAX_EVENTS 1024
 #define DEFAULT_PORT 2025
@@ -14,9 +17,14 @@ class Server {
 private:
   Epoll _epoll;
   tcp_socket _tcp;
+  pthreads _threads;
+
   // ProtocolFactory _factory;
 public:
-  Server() : _epoll(MAX_EVENTS), _tcp(DEFAULT_PORT){};
+  Server() : _epoll(MAX_EVENTS), _tcp(DEFAULT_PORT), _threads() {
+    kv_log::get_instance()->init("kvstore.log");
+    init_kvengine();
+  };
   ~Server() {
     if (_epoll.fd() >= 0) {
       close(_epoll.fd());
@@ -24,10 +32,8 @@ public:
     if (_tcp.fd() >= 0) {
       close(_tcp.fd());
     }
+    exit_kvengine();
   };
-  //初始化tcp
-  //初始化epoll
-  //事件循环
   int run() {
 
     if (_tcp.fd() < 0) {
@@ -43,6 +49,7 @@ public:
     }
     auto &factory = parserFactory::get_parser_factory();
     std::cout << "server start" << std::endl;
+    kv_log::get_instance()->write_log(0, "server start");
     //事件循环
     while (1) {
       int ret = epoll_wait(_epoll.fd(), _epoll.events().data(), MAX_EVENTS, -1);
@@ -96,17 +103,21 @@ public:
             }
             std::cout << "parse success111" << std::endl;
             std::cout << "开始处理handle" << std::endl;
-            parse->handle(conn_info); //处理成请求
-            //找到key_URL然后处理就行
-            auto &request = conn_info->_request;
-            auto key_URL = request->get_key_URL();
-            std::cout << "key_URL :" << key_URL << std::endl;
-            //这个时候交给任务队列去完成, 如果没有找到, 则返回404
-            auto handler = Router::instance().get_handler(key_URL);
-            if (handler == nullptr) {
-              continue;
-            }
-            handler(conn_info);
+            parse->handle(conn_info);
+            //-----这里选择忽略任务返回值，
+            _threads.enqueue([conn_info]() -> std::string {
+              auto &request = conn_info->_request;
+              auto key_URL = request->get_key_URL();
+              std::cout << "key_URL :" << key_URL << std::endl;
+              auto handler = Router::instance().get_handler(key_URL);
+              if (handler == nullptr) {
+                perror("get handler failed");
+                return "404 Not Found";
+              }
+              handler(conn_info);
+              return "200 OK";
+            }); //处理成请求
+
             break;
           }
           case EPOLLOUT: {

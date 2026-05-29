@@ -54,9 +54,7 @@ int kvstore_split_token(char *msg, char **tokens) {
     return -1;
 
   int idx = 0;
-
   char *token = strtok(msg, " ");
-
   while (token != NULL) {
     tokens[idx++] = token;
     token = strtok(NULL, " ");
@@ -64,10 +62,13 @@ int kvstore_split_token(char *msg, char **tokens) {
   return idx;
 }
 
-int kvstore_parser_protocol(struct conn_item *item, char **tokens, int count) {
+int kvstore_parser_protocol(char *wmsg, char **tokens, int count) {
 
-  if (item == NULL || tokens[0] == NULL || count == 0)
+  if (wmsg == NULL || tokens[0] == NULL || count == 0)
+
+  {
     return -1;
+  }
 
   int cmd = KVS_CMD_START;
 
@@ -76,19 +77,18 @@ int kvstore_parser_protocol(struct conn_item *item, char **tokens, int count) {
       break;
     }
   }
-  char *msg = item->wbuffer;
   char *key = tokens[1];
   char *value = tokens[2];
-  memset(msg, 0, BUFFER_LENGTH);
+  memset(wmsg, 0, BUFFER_LENGTH);
   switch (cmd) {
   // hash
   case KVS_CMD_HGET: {
 
     char *val = kvstore_hash_get(key);
     if (val) {
-      snprintf(msg, BUFFER_LENGTH, "%s", val);
+      snprintf(wmsg, BUFFER_LENGTH, "%s", val);
     } else {
-      snprintf(msg, BUFFER_LENGTH, "NO EXIST");
+      snprintf(wmsg, BUFFER_LENGTH, "NO EXIST");
     }
 
     break;
@@ -97,11 +97,11 @@ int kvstore_parser_protocol(struct conn_item *item, char **tokens, int count) {
 
     int res = kvstore_hash_delete(key);
     if (res < 0) { // server
-      snprintf(msg, BUFFER_LENGTH, "%s", "ERROR");
+      snprintf(wmsg, BUFFER_LENGTH, "%s", "ERROR");
     } else if (res == 0) {
-      snprintf(msg, BUFFER_LENGTH, "%s", "SUCCESS");
+      snprintf(wmsg, BUFFER_LENGTH, "%s", "SUCCESS");
     } else {
-      snprintf(msg, BUFFER_LENGTH, "NO EXIST");
+      snprintf(wmsg, BUFFER_LENGTH, "NO EXIST");
     }
 
     break;
@@ -110,11 +110,11 @@ int kvstore_parser_protocol(struct conn_item *item, char **tokens, int count) {
 
     int res = kvstore_hash_modify(key, value);
     if (res < 0) { // server
-      snprintf(msg, BUFFER_LENGTH, "%s", "ERROR");
+      snprintf(wmsg, BUFFER_LENGTH, "%s", "ERROR");
     } else if (res == 0) {
-      snprintf(msg, BUFFER_LENGTH, "%s", "SUCCESS");
+      snprintf(wmsg, BUFFER_LENGTH, "%s", "SUCCESS");
     } else {
-      snprintf(msg, BUFFER_LENGTH, "NO EXIST");
+      snprintf(wmsg, BUFFER_LENGTH, "NO EXIST");
     }
 
     break;
@@ -123,28 +123,28 @@ int kvstore_parser_protocol(struct conn_item *item, char **tokens, int count) {
   case KVS_CMD_HCOUNT: {
     int count = kvstore_hash_count();
     if (count < 0) { // server
-      snprintf(msg, BUFFER_LENGTH, "%s", "ERROR");
+      snprintf(wmsg, BUFFER_LENGTH, "%s", "ERROR");
     } else {
-      snprintf(msg, BUFFER_LENGTH, "%d", count);
+      snprintf(wmsg, BUFFER_LENGTH, "%d", count);
     }
     break;
   }
 
   default: {
     printf("cmd: %s\n", commands[cmd]);
-    assert(0);
+    // assert(0);//直接崩溃
+    snprintf(wmsg, BUFFER_LENGTH, "ERROR");
+    break;
   }
   }
 }
 
-int kvstore_request(struct conn_item *item) {
-  char *msg = item->rbuffer;
+int kvstore_request(char *rmsg, char *wmsg) {
   char *tokens[KVSTORE_MAX_TOKENS];
-
-  int count = kvstore_split_token(msg, tokens);
-
-  kvstore_parser_protocol(item, tokens, count);
-
+  //把msg按空格分割成tokens数组
+  int count = kvstore_split_token(rmsg, tokens);
+  //解析处理tokens数组
+  kvstore_parser_protocol(wmsg, tokens, count);
   return 0;
 }
 

@@ -49,8 +49,8 @@ public:
   //提交任务到线程池，返回future,用于获取任务执行结果
   template <typename T, typename... Args>
   auto enqueue(T &&t, Args &&...args)
-      -> std::future<typename std::invoke_result<T, Args...>> {
-    using return_type = typename std::invoke_result_t<T, Args...>;
+      -> std::future<std::invoke_result_t<T, Args...>> {
+    using return_type = std::invoke_result_t<T, Args...>;
     auto task = std::make_shared<std::packaged_task<return_type()>>(
         std::bind(std::forward<T>(t), std::forward<Args>(args)...));
     std::future<return_type> future_thread = task->get_future();
@@ -59,7 +59,6 @@ public:
       if (_stop.load()) {
         throw std::runtime_error("pthreads is stopped");
       }
-
       _task_queue.emplace([task]() { (*task)(); });
     }
     _queue_cond.notify_one();

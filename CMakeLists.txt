@@ -13,6 +13,9 @@ find_package(Threads REQUIRED)
 file(GLOB SOURCES 
     "src/*.cpp"
     "src/*.c"
+    "log/*.cpp"
+    "kv_core/*.cpp"
+    "hash/*.cpp"
 )
 
 # 如果没有找到源文件，列出已知的源文件
@@ -20,6 +23,9 @@ if(NOT SOURCES)
     set(SOURCES
         src/kv_core.cpp
         src/main.cpp
+        log/log.cpp
+        kv_core/hash.cpp
+        kv_core/kvstore.cpp
     )
 endif()
 
@@ -27,7 +33,7 @@ endif()
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 # 添加头文件目录
-target_include_directories(${PROJECT_NAME} PRIVATE include)
+target_include_directories(${PROJECT_NAME} PRIVATE include log kv_core)
 
 # 链接线程库
 target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)
