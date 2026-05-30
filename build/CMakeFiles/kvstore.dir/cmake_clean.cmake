@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/kvstore.dir/src/main.cpp.o.d"
   "CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o"
   "CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o.d"
+  "CMakeFiles/kvstore.dir/timer/timer.cpp.o"
+  "CMakeFiles/kvstore.dir/timer/timer.cpp.o.d"
   "kvstore"
   "kvstore.pdb"
 )

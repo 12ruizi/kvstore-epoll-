@@ -1,27 +1,32 @@
 [
 {
   "directory": "/home/rui/share/warehouse/1精匠/kvstore/build",
-  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -I/home/rui/share/warehouse/1精匠/kvstore/log -I/home/rui/share/warehouse/1精匠/kvstore/kv_core -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/kv_core/hash.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/kv_core/hash.cpp",
+  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -I/home/rui/share/warehouse/1精匠/kvstore/log -I/home/rui/share/warehouse/1精匠/kvstore/kv_core -I/home/rui/share/warehouse/1精匠/kvstore/timer -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/kv_core/hash.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/kv_core/hash.cpp",
   "file": "/home/rui/share/warehouse/1精匠/kvstore/kv_core/hash.cpp"
 },
 {
   "directory": "/home/rui/share/warehouse/1精匠/kvstore/build",
-  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -I/home/rui/share/warehouse/1精匠/kvstore/log -I/home/rui/share/warehouse/1精匠/kvstore/kv_core -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/kv_core/kvstore.cpp",
+  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -I/home/rui/share/warehouse/1精匠/kvstore/log -I/home/rui/share/warehouse/1精匠/kvstore/kv_core -I/home/rui/share/warehouse/1精匠/kvstore/timer -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/kv_core/kvstore.cpp",
   "file": "/home/rui/share/warehouse/1精匠/kvstore/kv_core/kvstore.cpp"
 },
 {
   "directory": "/home/rui/share/warehouse/1精匠/kvstore/build",
-  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -I/home/rui/share/warehouse/1精匠/kvstore/log -I/home/rui/share/warehouse/1精匠/kvstore/kv_core -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/log/log.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/log/log.cpp",
+  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -I/home/rui/share/warehouse/1精匠/kvstore/log -I/home/rui/share/warehouse/1精匠/kvstore/kv_core -I/home/rui/share/warehouse/1精匠/kvstore/timer -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/log/log.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/log/log.cpp",
   "file": "/home/rui/share/warehouse/1精匠/kvstore/log/log.cpp"
 },
 {
   "directory": "/home/rui/share/warehouse/1精匠/kvstore/build",
-  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -I/home/rui/share/warehouse/1精匠/kvstore/log -I/home/rui/share/warehouse/1精匠/kvstore/kv_core -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/src/main.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/main.cpp",
+  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -I/home/rui/share/warehouse/1精匠/kvstore/log -I/home/rui/share/warehouse/1精匠/kvstore/kv_core -I/home/rui/share/warehouse/1精匠/kvstore/timer -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/src/main.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/main.cpp",
   "file": "/home/rui/share/warehouse/1精匠/kvstore/src/main.cpp"
 },
 {
   "directory": "/home/rui/share/warehouse/1精匠/kvstore/build",
-  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -I/home/rui/share/warehouse/1精匠/kvstore/log -I/home/rui/share/warehouse/1精匠/kvstore/kv_core -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/protocol_parser.cpp",
+  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -I/home/rui/share/warehouse/1精匠/kvstore/log -I/home/rui/share/warehouse/1精匠/kvstore/kv_core -I/home/rui/share/warehouse/1精匠/kvstore/timer -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/protocol_parser.cpp",
   "file": "/home/rui/share/warehouse/1精匠/kvstore/src/protocol_parser.cpp"
+},
+{
+  "directory": "/home/rui/share/warehouse/1精匠/kvstore/build",
+  "command": "/usr/bin/c++  -I/home/rui/share/warehouse/1精匠/kvstore/include -I/home/rui/share/warehouse/1精匠/kvstore/log -I/home/rui/share/warehouse/1精匠/kvstore/kv_core -I/home/rui/share/warehouse/1精匠/kvstore/timer -Wall -Wextra -g -pthread -std=gnu++20 -o CMakeFiles/kvstore.dir/timer/timer.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/timer/timer.cpp",
+  "file": "/home/rui/share/warehouse/1精匠/kvstore/timer/timer.cpp"
 }
 ]

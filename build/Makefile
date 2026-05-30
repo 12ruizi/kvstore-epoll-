@@ -249,6 +249,30 @@ src/protocol_parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/protocol_parser.cpp.s
 .PHONY : src/protocol_parser.cpp.s
 
+timer/timer.o: timer/timer.cpp.o
+.PHONY : timer/timer.o
+
+# target to build an object file
+timer/timer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/timer/timer.cpp.o
+.PHONY : timer/timer.cpp.o
+
+timer/timer.i: timer/timer.cpp.i
+.PHONY : timer/timer.i
+
+# target to preprocess a source file
+timer/timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/timer/timer.cpp.i
+.PHONY : timer/timer.cpp.i
+
+timer/timer.s: timer/timer.cpp.s
+.PHONY : timer/timer.s
+
+# target to generate assembly for a file
+timer/timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/timer/timer.cpp.s
+.PHONY : timer/timer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -273,6 +297,9 @@ help:
 	@echo "... src/protocol_parser.o"
 	@echo "... src/protocol_parser.i"
 	@echo "... src/protocol_parser.s"
+	@echo "... timer/timer.o"
+	@echo "... timer/timer.i"
+	@echo "... timer/timer.s"
 .PHONY : help
 
 

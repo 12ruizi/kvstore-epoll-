@@ -2,6 +2,7 @@
 #define __SERVER_H__
 #include "../kv_core/kvstore.h"
 #include "../log/log.h"
+#include "../timer/timer.h"
 #include "Request.h"
 #include "Router.h"
 #include "connect_info.h"
@@ -17,11 +18,12 @@ class Server {
 private:
   Epoll _epoll;
   tcp_socket _tcp;
-  pthreads _threads;
-
+  pthreads _threads;           //工作线程
+  Thread_clockr _timer_thread; //定时器线程
   // ProtocolFactory _factory;
 public:
-  Server() : _epoll(MAX_EVENTS), _tcp(DEFAULT_PORT), _threads() {
+  Server()
+      : _epoll(MAX_EVENTS), _tcp(DEFAULT_PORT), _threads(), _timer_thread() {
     kv_log::get_instance()->init("kvstore.log");
     init_kvengine();
   };
@@ -64,7 +66,16 @@ public:
             perror("Accept_tcp");
             continue;
           }
-          int ret = _epoll.add(conn_fd, EPOLLIN);
+          int ret =
+              _epoll.add(conn_fd, EPOLLIN); //添加新的连接到epoll//添加定时器
+          _timer_thread.add_timer(
+              conn_fd, 60,
+              [conn_fd]() {
+                close(conn_fd);
+                std::cout << "close conn_fd = " << conn_fd << std::endl;
+              },
+              1);
+          std::cout << "add timer success" << std::endl;
           if (ret < 0) {
             perror("epoll add conn socket failed");
             close(conn_fd);
@@ -101,7 +112,6 @@ public:
               perror("parse failed");
               continue; //数据不完整
             }
-            std::cout << "parse success111" << std::endl;
             std::cout << "开始处理handle" << std::endl;
             parse->handle(conn_info);
             //-----这里选择忽略任务返回值，

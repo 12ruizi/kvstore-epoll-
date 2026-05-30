@@ -16,6 +16,7 @@ file(GLOB SOURCES
     "log/*.cpp"
     "kv_core/*.cpp"
     "hash/*.cpp"
+    "timer/*.cpp"
 )
 
 # 如果没有找到源文件，列出已知的源文件
@@ -26,6 +27,7 @@ if(NOT SOURCES)
         log/log.cpp
         kv_core/hash.cpp
         kv_core/kvstore.cpp
+        timer/timer.cpp
     )
 endif()
 
@@ -33,7 +35,7 @@ endif()
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 # 添加头文件目录
-target_include_directories(${PROJECT_NAME} PRIVATE include log kv_core)
+target_include_directories(${PROJECT_NAME} PRIVATE include log kv_core timer)
 
 # 链接线程库
 target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)

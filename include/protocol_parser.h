@@ -71,14 +71,14 @@ public:
 };
 
 #define REGISTER_PARSER(name, creator)                                         \
-  static std::unique_ptr<ProtocolParser> creator##Factory() {                  \
+  static std::unique_ptr<ProtocolParser> creator##name() {                     \
     return std::make_unique<creator>();                                        \
   }                                                                            \
                                                                                \
   static struct Register_##name {                                              \
     Register_##name() {                                                        \
       parserFactory::get_parser_factory().register_parser(#name,               \
-                                                          creator##Factory);   \
+                                                          creator##name);      \
       std::cout << "自动注册协议解析器: " << #name << std::endl;               \
     }                                                                          \
   } g_register_##name;
