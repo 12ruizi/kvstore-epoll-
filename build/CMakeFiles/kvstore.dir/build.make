@@ -73,94 +73,169 @@ CMakeFiles/kvstore.dir/kv_core/hash.cpp.o: CMakeFiles/kvstore.dir/flags.make
 CMakeFiles/kvstore.dir/kv_core/hash.cpp.o: ../kv_core/hash.cpp
 CMakeFiles/kvstore.dir/kv_core/hash.cpp.o: CMakeFiles/kvstore.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/kvstore.dir/kv_core/hash.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/kv_core/hash.cpp.o -MF CMakeFiles/kvstore.dir/kv_core/hash.cpp.o.d -o CMakeFiles/kvstore.dir/kv_core/hash.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/kv_core/hash.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/kv_core/hash.cpp.o -MF CMakeFiles/kvstore.dir/kv_core/hash.cpp.o.d -o CMakeFiles/kvstore.dir/kv_core/hash.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/kv_core/hash.cpp
 
 CMakeFiles/kvstore.dir/kv_core/hash.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kvstore.dir/kv_core/hash.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/kv_core/hash.cpp > CMakeFiles/kvstore.dir/kv_core/hash.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/kv_core/hash.cpp > CMakeFiles/kvstore.dir/kv_core/hash.cpp.i
 
 CMakeFiles/kvstore.dir/kv_core/hash.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kvstore.dir/kv_core/hash.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/kv_core/hash.cpp -o CMakeFiles/kvstore.dir/kv_core/hash.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/kv_core/hash.cpp -o CMakeFiles/kvstore.dir/kv_core/hash.cpp.s
 
 CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o: CMakeFiles/kvstore.dir/flags.make
 CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o: ../kv_core/kvstore.cpp
 CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o: CMakeFiles/kvstore.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o -MF CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o.d -o CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/kv_core/kvstore.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o -MF CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o.d -o CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/kv_core/kvstore.cpp
 
 CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/kv_core/kvstore.cpp > CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/kv_core/kvstore.cpp > CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.i
 
 CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/kv_core/kvstore.cpp -o CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/kv_core/kvstore.cpp -o CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.s
 
 CMakeFiles/kvstore.dir/log/log.cpp.o: CMakeFiles/kvstore.dir/flags.make
 CMakeFiles/kvstore.dir/log/log.cpp.o: ../log/log.cpp
 CMakeFiles/kvstore.dir/log/log.cpp.o: CMakeFiles/kvstore.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/kvstore.dir/log/log.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/log/log.cpp.o -MF CMakeFiles/kvstore.dir/log/log.cpp.o.d -o CMakeFiles/kvstore.dir/log/log.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/log/log.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/log/log.cpp.o -MF CMakeFiles/kvstore.dir/log/log.cpp.o.d -o CMakeFiles/kvstore.dir/log/log.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/log/log.cpp
 
 CMakeFiles/kvstore.dir/log/log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kvstore.dir/log/log.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/log/log.cpp > CMakeFiles/kvstore.dir/log/log.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/log/log.cpp > CMakeFiles/kvstore.dir/log/log.cpp.i
 
 CMakeFiles/kvstore.dir/log/log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kvstore.dir/log/log.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/log/log.cpp -o CMakeFiles/kvstore.dir/log/log.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/log/log.cpp -o CMakeFiles/kvstore.dir/log/log.cpp.s
+
+CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.o: CMakeFiles/kvstore.dir/flags.make
+CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.o: ../network/connect_info/ring_buffer.cpp
+CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.o: CMakeFiles/kvstore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.o -MF CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.o.d -o CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/network/connect_info/ring_buffer.cpp
+
+CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/network/connect_info/ring_buffer.cpp > CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.i
+
+CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/network/connect_info/ring_buffer.cpp -o CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.s
+
+CMakeFiles/kvstore.dir/network/epoll.cpp.o: CMakeFiles/kvstore.dir/flags.make
+CMakeFiles/kvstore.dir/network/epoll.cpp.o: ../network/epoll.cpp
+CMakeFiles/kvstore.dir/network/epoll.cpp.o: CMakeFiles/kvstore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/kvstore.dir/network/epoll.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/network/epoll.cpp.o -MF CMakeFiles/kvstore.dir/network/epoll.cpp.o.d -o CMakeFiles/kvstore.dir/network/epoll.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/network/epoll.cpp
+
+CMakeFiles/kvstore.dir/network/epoll.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kvstore.dir/network/epoll.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/network/epoll.cpp > CMakeFiles/kvstore.dir/network/epoll.cpp.i
+
+CMakeFiles/kvstore.dir/network/epoll.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kvstore.dir/network/epoll.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/network/epoll.cpp -o CMakeFiles/kvstore.dir/network/epoll.cpp.s
+
+CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o: CMakeFiles/kvstore.dir/flags.make
+CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o: ../network/protocol_parser/protocol_parser.cpp
+CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o: CMakeFiles/kvstore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o -MF CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o.d -o CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/protocol_parser.cpp
+
+CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/protocol_parser.cpp > CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.i
+
+CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/protocol_parser.cpp -o CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.s
+
+CMakeFiles/kvstore.dir/network/tcp.cpp.o: CMakeFiles/kvstore.dir/flags.make
+CMakeFiles/kvstore.dir/network/tcp.cpp.o: ../network/tcp.cpp
+CMakeFiles/kvstore.dir/network/tcp.cpp.o: CMakeFiles/kvstore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/kvstore.dir/network/tcp.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/network/tcp.cpp.o -MF CMakeFiles/kvstore.dir/network/tcp.cpp.o.d -o CMakeFiles/kvstore.dir/network/tcp.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/network/tcp.cpp
+
+CMakeFiles/kvstore.dir/network/tcp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kvstore.dir/network/tcp.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/network/tcp.cpp > CMakeFiles/kvstore.dir/network/tcp.cpp.i
+
+CMakeFiles/kvstore.dir/network/tcp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kvstore.dir/network/tcp.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/network/tcp.cpp -o CMakeFiles/kvstore.dir/network/tcp.cpp.s
 
 CMakeFiles/kvstore.dir/src/main.cpp.o: CMakeFiles/kvstore.dir/flags.make
 CMakeFiles/kvstore.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/kvstore.dir/src/main.cpp.o: CMakeFiles/kvstore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/kvstore.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/src/main.cpp.o -MF CMakeFiles/kvstore.dir/src/main.cpp.o.d -o CMakeFiles/kvstore.dir/src/main.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/kvstore.dir/src/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/src/main.cpp.o -MF CMakeFiles/kvstore.dir/src/main.cpp.o.d -o CMakeFiles/kvstore.dir/src/main.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/main.cpp
 
 CMakeFiles/kvstore.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kvstore.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/src/main.cpp > CMakeFiles/kvstore.dir/src/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/src/main.cpp > CMakeFiles/kvstore.dir/src/main.cpp.i
 
 CMakeFiles/kvstore.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kvstore.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/src/main.cpp -o CMakeFiles/kvstore.dir/src/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/src/main.cpp -o CMakeFiles/kvstore.dir/src/main.cpp.s
 
-CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o: CMakeFiles/kvstore.dir/flags.make
-CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o: ../src/protocol_parser.cpp
-CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o: CMakeFiles/kvstore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o -MF CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o.d -o CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/protocol_parser.cpp
+CMakeFiles/kvstore.dir/src/server.cpp.o: CMakeFiles/kvstore.dir/flags.make
+CMakeFiles/kvstore.dir/src/server.cpp.o: ../src/server.cpp
+CMakeFiles/kvstore.dir/src/server.cpp.o: CMakeFiles/kvstore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/kvstore.dir/src/server.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/src/server.cpp.o -MF CMakeFiles/kvstore.dir/src/server.cpp.o.d -o CMakeFiles/kvstore.dir/src/server.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/src/server.cpp
 
-CMakeFiles/kvstore.dir/src/protocol_parser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kvstore.dir/src/protocol_parser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/src/protocol_parser.cpp > CMakeFiles/kvstore.dir/src/protocol_parser.cpp.i
+CMakeFiles/kvstore.dir/src/server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kvstore.dir/src/server.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/src/server.cpp > CMakeFiles/kvstore.dir/src/server.cpp.i
 
-CMakeFiles/kvstore.dir/src/protocol_parser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kvstore.dir/src/protocol_parser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/src/protocol_parser.cpp -o CMakeFiles/kvstore.dir/src/protocol_parser.cpp.s
+CMakeFiles/kvstore.dir/src/server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kvstore.dir/src/server.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/src/server.cpp -o CMakeFiles/kvstore.dir/src/server.cpp.s
 
 CMakeFiles/kvstore.dir/timer/timer.cpp.o: CMakeFiles/kvstore.dir/flags.make
 CMakeFiles/kvstore.dir/timer/timer.cpp.o: ../timer/timer.cpp
 CMakeFiles/kvstore.dir/timer/timer.cpp.o: CMakeFiles/kvstore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/kvstore.dir/timer/timer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/timer/timer.cpp.o -MF CMakeFiles/kvstore.dir/timer/timer.cpp.o.d -o CMakeFiles/kvstore.dir/timer/timer.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/timer/timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/kvstore.dir/timer/timer.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/timer/timer.cpp.o -MF CMakeFiles/kvstore.dir/timer/timer.cpp.o.d -o CMakeFiles/kvstore.dir/timer/timer.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/timer/timer.cpp
 
 CMakeFiles/kvstore.dir/timer/timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kvstore.dir/timer/timer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/timer/timer.cpp > CMakeFiles/kvstore.dir/timer/timer.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/timer/timer.cpp > CMakeFiles/kvstore.dir/timer/timer.cpp.i
 
 CMakeFiles/kvstore.dir/timer/timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kvstore.dir/timer/timer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/timer/timer.cpp -o CMakeFiles/kvstore.dir/timer/timer.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/timer/timer.cpp -o CMakeFiles/kvstore.dir/timer/timer.cpp.s
+
+CMakeFiles/kvstore.dir/utils/threads_pool.cpp.o: CMakeFiles/kvstore.dir/flags.make
+CMakeFiles/kvstore.dir/utils/threads_pool.cpp.o: ../utils/threads_pool.cpp
+CMakeFiles/kvstore.dir/utils/threads_pool.cpp.o: CMakeFiles/kvstore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/kvstore.dir/utils/threads_pool.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kvstore.dir/utils/threads_pool.cpp.o -MF CMakeFiles/kvstore.dir/utils/threads_pool.cpp.o.d -o CMakeFiles/kvstore.dir/utils/threads_pool.cpp.o -c /home/rui/share/warehouse/1精匠/kvstore/utils/threads_pool.cpp
+
+CMakeFiles/kvstore.dir/utils/threads_pool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kvstore.dir/utils/threads_pool.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rui/share/warehouse/1精匠/kvstore/utils/threads_pool.cpp > CMakeFiles/kvstore.dir/utils/threads_pool.cpp.i
+
+CMakeFiles/kvstore.dir/utils/threads_pool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kvstore.dir/utils/threads_pool.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rui/share/warehouse/1精匠/kvstore/utils/threads_pool.cpp -o CMakeFiles/kvstore.dir/utils/threads_pool.cpp.s
 
 # Object files for target kvstore
 kvstore_OBJECTS = \
 "CMakeFiles/kvstore.dir/kv_core/hash.cpp.o" \
 "CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o" \
 "CMakeFiles/kvstore.dir/log/log.cpp.o" \
+"CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.o" \
+"CMakeFiles/kvstore.dir/network/epoll.cpp.o" \
+"CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o" \
+"CMakeFiles/kvstore.dir/network/tcp.cpp.o" \
 "CMakeFiles/kvstore.dir/src/main.cpp.o" \
-"CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o" \
-"CMakeFiles/kvstore.dir/timer/timer.cpp.o"
+"CMakeFiles/kvstore.dir/src/server.cpp.o" \
+"CMakeFiles/kvstore.dir/timer/timer.cpp.o" \
+"CMakeFiles/kvstore.dir/utils/threads_pool.cpp.o"
 
 # External object files for target kvstore
 kvstore_EXTERNAL_OBJECTS =
@@ -168,12 +243,17 @@ kvstore_EXTERNAL_OBJECTS =
 kvstore: CMakeFiles/kvstore.dir/kv_core/hash.cpp.o
 kvstore: CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o
 kvstore: CMakeFiles/kvstore.dir/log/log.cpp.o
+kvstore: CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.o
+kvstore: CMakeFiles/kvstore.dir/network/epoll.cpp.o
+kvstore: CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o
+kvstore: CMakeFiles/kvstore.dir/network/tcp.cpp.o
 kvstore: CMakeFiles/kvstore.dir/src/main.cpp.o
-kvstore: CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o
+kvstore: CMakeFiles/kvstore.dir/src/server.cpp.o
 kvstore: CMakeFiles/kvstore.dir/timer/timer.cpp.o
+kvstore: CMakeFiles/kvstore.dir/utils/threads_pool.cpp.o
 kvstore: CMakeFiles/kvstore.dir/build.make
 kvstore: CMakeFiles/kvstore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable kvstore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rui/share/warehouse/1精匠/kvstore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable kvstore"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kvstore.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -2,8 +2,9 @@ CMakeFiles/kvstore.dir/kv_core/hash.cpp.o: \
  /home/rui/share/warehouse/1精匠/kvstore/kv_core/hash.cpp \
  /usr/include/stdc-predef.h \
  /home/rui/share/warehouse/1精匠/kvstore/kv_core/kvstore.h \
- /home/rui/share/warehouse/1精匠/kvstore/kv_core/../include/connect_info.h \
- /home/rui/share/warehouse/1精匠/kvstore/kv_core/../include/Request.h \
+ /home/rui/share/warehouse/1精匠/kvstore/kv_core/../network/connect_info/connect_info.h \
+ /home/rui/share/warehouse/1精匠/kvstore/include/../network/protocol_parser/protocol_parser.h \
+ /home/rui/share/warehouse/1精匠/kvstore/include/../network/protocol_parser/../connect_info/Request.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -151,9 +152,8 @@ CMakeFiles/kvstore.dir/kv_core/hash.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
- /usr/include/c++/11/bits/basic_string.tcc \
- /home/rui/share/warehouse/1精匠/kvstore/kv_core/../include/protocol_parser.h \
- /usr/include/c++/11/functional /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/bits/basic_string.tcc /usr/include/c++/11/functional \
+ /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/typeinfo \
  /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
@@ -222,7 +222,7 @@ CMakeFiles/kvstore.dir/kv_core/hash.cpp.o: \
  /usr/include/c++/11/bits/uses_allocator_args.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/rui/share/warehouse/1精匠/kvstore/kv_core/../include/ring_buffer.h \
+ /home/rui/share/warehouse/1精匠/kvstore/kv_core/../network/connect_info/ring_buffer.h \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \

@@ -17,17 +17,25 @@ file(GLOB SOURCES
     "kv_core/*.cpp"
     "hash/*.cpp"
     "timer/*.cpp"
+    "utils/*.cpp"
+    "network/*.cpp"
+    "network/protocol_parser/*.cpp"
+    "network/connect_info/*.cpp"
+    "network/epoll.cpp"
 )
 
 # 如果没有找到源文件，列出已知的源文件
 if(NOT SOURCES)
     set(SOURCES
-        src/kv_core.cpp
         src/main.cpp
-        log/log.cpp
-        kv_core/hash.cpp
-        kv_core/kvstore.cpp
+        src/protocol_parser.cpp
         timer/timer.cpp
+        utils/threads_pool.cpp
+        network/epoll.cpp
+        network/tcp.cpp
+        task_and_router/Router.cpp
+        task_and_router/http_task.cpp
+        network/protocol_parser/protocol_parser.cpp
     )
 endif()
 
@@ -35,7 +43,7 @@ endif()
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 # 添加头文件目录
-target_include_directories(${PROJECT_NAME} PRIVATE include log kv_core timer)
+target_include_directories(${PROJECT_NAME} PRIVATE include log kv_core timer utils network task_and_router network/protocol_parser)
 
 # 链接线程库
 target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)

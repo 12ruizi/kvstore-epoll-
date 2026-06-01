@@ -1,6 +1,6 @@
 #ifndef __KVSTORE_H__
 #define __KVSTORE_H__
-#include "../include/connect_info.h"
+#include "../network/connect_info/connect_info.h"
 #include <assert.h>
 #include <stddef.h>
 #include <stdio.h>

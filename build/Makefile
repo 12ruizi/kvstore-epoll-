@@ -201,6 +201,102 @@ log/log.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/log/log.cpp.s
 .PHONY : log/log.cpp.s
 
+network/connect_info/ring_buffer.o: network/connect_info/ring_buffer.cpp.o
+.PHONY : network/connect_info/ring_buffer.o
+
+# target to build an object file
+network/connect_info/ring_buffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.o
+.PHONY : network/connect_info/ring_buffer.cpp.o
+
+network/connect_info/ring_buffer.i: network/connect_info/ring_buffer.cpp.i
+.PHONY : network/connect_info/ring_buffer.i
+
+# target to preprocess a source file
+network/connect_info/ring_buffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.i
+.PHONY : network/connect_info/ring_buffer.cpp.i
+
+network/connect_info/ring_buffer.s: network/connect_info/ring_buffer.cpp.s
+.PHONY : network/connect_info/ring_buffer.s
+
+# target to generate assembly for a file
+network/connect_info/ring_buffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/network/connect_info/ring_buffer.cpp.s
+.PHONY : network/connect_info/ring_buffer.cpp.s
+
+network/epoll.o: network/epoll.cpp.o
+.PHONY : network/epoll.o
+
+# target to build an object file
+network/epoll.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/network/epoll.cpp.o
+.PHONY : network/epoll.cpp.o
+
+network/epoll.i: network/epoll.cpp.i
+.PHONY : network/epoll.i
+
+# target to preprocess a source file
+network/epoll.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/network/epoll.cpp.i
+.PHONY : network/epoll.cpp.i
+
+network/epoll.s: network/epoll.cpp.s
+.PHONY : network/epoll.s
+
+# target to generate assembly for a file
+network/epoll.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/network/epoll.cpp.s
+.PHONY : network/epoll.cpp.s
+
+network/protocol_parser/protocol_parser.o: network/protocol_parser/protocol_parser.cpp.o
+.PHONY : network/protocol_parser/protocol_parser.o
+
+# target to build an object file
+network/protocol_parser/protocol_parser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o
+.PHONY : network/protocol_parser/protocol_parser.cpp.o
+
+network/protocol_parser/protocol_parser.i: network/protocol_parser/protocol_parser.cpp.i
+.PHONY : network/protocol_parser/protocol_parser.i
+
+# target to preprocess a source file
+network/protocol_parser/protocol_parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.i
+.PHONY : network/protocol_parser/protocol_parser.cpp.i
+
+network/protocol_parser/protocol_parser.s: network/protocol_parser/protocol_parser.cpp.s
+.PHONY : network/protocol_parser/protocol_parser.s
+
+# target to generate assembly for a file
+network/protocol_parser/protocol_parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.s
+.PHONY : network/protocol_parser/protocol_parser.cpp.s
+
+network/tcp.o: network/tcp.cpp.o
+.PHONY : network/tcp.o
+
+# target to build an object file
+network/tcp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/network/tcp.cpp.o
+.PHONY : network/tcp.cpp.o
+
+network/tcp.i: network/tcp.cpp.i
+.PHONY : network/tcp.i
+
+# target to preprocess a source file
+network/tcp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/network/tcp.cpp.i
+.PHONY : network/tcp.cpp.i
+
+network/tcp.s: network/tcp.cpp.s
+.PHONY : network/tcp.s
+
+# target to generate assembly for a file
+network/tcp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/network/tcp.cpp.s
+.PHONY : network/tcp.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -225,29 +321,29 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/protocol_parser.o: src/protocol_parser.cpp.o
-.PHONY : src/protocol_parser.o
+src/server.o: src/server.cpp.o
+.PHONY : src/server.o
 
 # target to build an object file
-src/protocol_parser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/protocol_parser.cpp.o
-.PHONY : src/protocol_parser.cpp.o
+src/server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/server.cpp.o
+.PHONY : src/server.cpp.o
 
-src/protocol_parser.i: src/protocol_parser.cpp.i
-.PHONY : src/protocol_parser.i
+src/server.i: src/server.cpp.i
+.PHONY : src/server.i
 
 # target to preprocess a source file
-src/protocol_parser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/protocol_parser.cpp.i
-.PHONY : src/protocol_parser.cpp.i
+src/server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/server.cpp.i
+.PHONY : src/server.cpp.i
 
-src/protocol_parser.s: src/protocol_parser.cpp.s
-.PHONY : src/protocol_parser.s
+src/server.s: src/server.cpp.s
+.PHONY : src/server.s
 
 # target to generate assembly for a file
-src/protocol_parser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/protocol_parser.cpp.s
-.PHONY : src/protocol_parser.cpp.s
+src/server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/server.cpp.s
+.PHONY : src/server.cpp.s
 
 timer/timer.o: timer/timer.cpp.o
 .PHONY : timer/timer.o
@@ -273,6 +369,30 @@ timer/timer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/timer/timer.cpp.s
 .PHONY : timer/timer.cpp.s
 
+utils/threads_pool.o: utils/threads_pool.cpp.o
+.PHONY : utils/threads_pool.o
+
+# target to build an object file
+utils/threads_pool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/utils/threads_pool.cpp.o
+.PHONY : utils/threads_pool.cpp.o
+
+utils/threads_pool.i: utils/threads_pool.cpp.i
+.PHONY : utils/threads_pool.i
+
+# target to preprocess a source file
+utils/threads_pool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/utils/threads_pool.cpp.i
+.PHONY : utils/threads_pool.cpp.i
+
+utils/threads_pool.s: utils/threads_pool.cpp.s
+.PHONY : utils/threads_pool.s
+
+# target to generate assembly for a file
+utils/threads_pool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/utils/threads_pool.cpp.s
+.PHONY : utils/threads_pool.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -291,15 +411,30 @@ help:
 	@echo "... log/log.o"
 	@echo "... log/log.i"
 	@echo "... log/log.s"
+	@echo "... network/connect_info/ring_buffer.o"
+	@echo "... network/connect_info/ring_buffer.i"
+	@echo "... network/connect_info/ring_buffer.s"
+	@echo "... network/epoll.o"
+	@echo "... network/epoll.i"
+	@echo "... network/epoll.s"
+	@echo "... network/protocol_parser/protocol_parser.o"
+	@echo "... network/protocol_parser/protocol_parser.i"
+	@echo "... network/protocol_parser/protocol_parser.s"
+	@echo "... network/tcp.o"
+	@echo "... network/tcp.i"
+	@echo "... network/tcp.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/protocol_parser.o"
-	@echo "... src/protocol_parser.i"
-	@echo "... src/protocol_parser.s"
+	@echo "... src/server.o"
+	@echo "... src/server.i"
+	@echo "... src/server.s"
 	@echo "... timer/timer.o"
 	@echo "... timer/timer.i"
 	@echo "... timer/timer.s"
+	@echo "... utils/threads_pool.o"
+	@echo "... utils/threads_pool.i"
+	@echo "... utils/threads_pool.s"
 .PHONY : help
 
 

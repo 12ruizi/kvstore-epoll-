@@ -1,10 +1,11 @@
 CMakeFiles/kvstore.dir/src/main.cpp.o: \
  /home/rui/share/warehouse/1精匠/kvstore/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/server.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/../kv_core/kvstore.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/../kv_core/../include/connect_info.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/../kv_core/../include/Request.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/server.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../kv_core/kvstore.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../kv_core/../network/connect_info/connect_info.h \
+ /home/rui/share/warehouse/1精匠/kvstore/include/../network/protocol_parser/protocol_parser.h \
+ /home/rui/share/warehouse/1精匠/kvstore/include/../network/protocol_parser/../connect_info/Request.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -152,9 +153,8 @@ CMakeFiles/kvstore.dir/src/main.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
- /usr/include/c++/11/bits/basic_string.tcc \
- /home/rui/share/warehouse/1精匠/kvstore/include/../kv_core/../include/protocol_parser.h \
- /usr/include/c++/11/functional /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/bits/basic_string.tcc /usr/include/c++/11/functional \
+ /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/typeinfo \
  /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
@@ -223,7 +223,7 @@ CMakeFiles/kvstore.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/uses_allocator_args.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/../kv_core/../include/ring_buffer.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../kv_core/../network/connect_info/ring_buffer.h \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -244,12 +244,24 @@ CMakeFiles/kvstore.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/c++/11/atomic \
  /usr/include/assert.h /usr/include/c++/11/stdlib.h /usr/include/string.h \
  /usr/include/strings.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/../log/log.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../log/log.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/limits \
  /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/unique_lock.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/../timer/timer.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../network/connect_info/connect_info.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../network/epoll.h \
+ /usr/include/x86_64-linux-gnu/sys/epoll.h \
+ /usr/include/x86_64-linux-gnu/bits/epoll.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../network/protocol_parser/protocol_parser.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../network/tcp.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../network/../utils/memory.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../network/../utils/../network/connect_info/connect_info.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../network/../utils/../network/protocol_parser/protocol_parser.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../network/connect_info/connect_info.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../task_and_router/Router.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../task_and_router/../network/connect_info/connect_info.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../timer/timer.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/stop_token \
  /usr/include/c++/11/bits/std_thread.h /usr/include/c++/11/semaphore \
  /usr/include/c++/11/bits/semaphore_base.h \
@@ -260,15 +272,6 @@ CMakeFiles/kvstore.dir/src/main.cpp.o: \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
  /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_queue.h \
  /usr/include/c++/11/thread \
- /home/rui/share/warehouse/1精匠/kvstore/include/Router.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/connect_info.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/epoll.h \
- /usr/include/x86_64-linux-gnu/sys/epoll.h \
- /usr/include/x86_64-linux-gnu/bits/epoll.h \
- /home/rui/share/warehouse/1精匠/kvstore/kv_core/kvstore.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/protocol_parser.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/tcp.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/memory.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/threads_pool.h \
+ /home/rui/share/warehouse/1精匠/kvstore/src/../include/../utils/threads_pool.h \
  /usr/include/c++/11/future /usr/include/c++/11/bits/atomic_futex.h \
  /usr/include/c++/11/shared_mutex
