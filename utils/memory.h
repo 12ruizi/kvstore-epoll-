@@ -1,7 +1,6 @@
 
 #ifndef MEMORY_H
 #define MEMORY_H
-
 #include "../network/connect_info/connect_info.h"
 #include "../network/protocol_parser/protocol_parser.h"
 #include <map>
@@ -62,6 +61,12 @@ public:
   }
   //初始化完成后将信息存放到 map里面
   void add_map(size_t id, ConnectionInfo *info) {
+    info->_fd = id;
+    info->_last_active_time = time(nullptr); //初始化最后活跃时间戳
+    struct sockaddr_in addr;
+    socklen_t addr_size = sizeof(addr);
+    getpeername(id, (struct sockaddr *)&addr, &addr_size);
+    info->_addr = addr;
     _control->_map->insert({id, info});
   }
   //根据id获取连接信息

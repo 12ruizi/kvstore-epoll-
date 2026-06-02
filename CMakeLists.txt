@@ -22,6 +22,7 @@ file(GLOB SOURCES
     "network/protocol_parser/*.cpp"
     "network/connect_info/*.cpp"
     "network/epoll.cpp"
+    "Webserver.cpp"
 )
 
 # 如果没有找到源文件，列出已知的源文件
@@ -36,6 +37,7 @@ if(NOT SOURCES)
         task_and_router/Router.cpp
         task_and_router/http_task.cpp
         network/protocol_parser/protocol_parser.cpp
+        Webserver.cpp
     )
 endif()
 
@@ -43,7 +45,7 @@ endif()
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 # 添加头文件目录
-target_include_directories(${PROJECT_NAME} PRIVATE include log kv_core timer utils network task_and_router network/protocol_parser)
+target_include_directories(${PROJECT_NAME} PRIVATE include Log kv_core timer utils network task_and_router network/protocol_parser)
 
 # 链接线程库
 target_link_libraries(${PROJECT_NAME} PRIVATE Threads::Threads)

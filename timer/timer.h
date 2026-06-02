@@ -6,6 +6,7 @@
 #include <chrono>
 #include <condition_variable>
 #include <functional>
+#include <iostream>
 #include <memory>
 #include <mutex>
 #include <queue>
@@ -14,7 +15,6 @@
 #include <time.h>
 #include <unordered_map>
 #include <vector>
-
 //定时器结构体
 struct timer {
   int timer_id;                   //定时器id
@@ -47,13 +47,14 @@ private:
 
 public:
   //添加定时器//跟连接id一样，
-  void add_timer(int timer_id, time_t without, std::function<void()> callback,
-                 int version);
+  int add_timer(int timer_id, time_t without, std::function<void()> callback,
+                int version);
   //删除所有定时器
-  void del_all_timer();
+  bool del_all_timer();
   //修改定时器
-  void mod_timer(int timer_id, time_t without, std::function<void()> callback);
-
+  bool mod_timer(int timer_id, time_t without, std::function<void()> callback);
+  //删除定时器
+  bool del_timer(int timer_id);
   Thread_clockr();
   ~Thread_clockr();
 };

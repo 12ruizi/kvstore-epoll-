@@ -30,6 +30,6 @@ public:
   //获取事件列表
   std::vector<struct epoll_event> &events();
   //获取epollfd
-  int fd() const;
+  int get_epoll_fd() const;
 };
 #endif

@@ -52,7 +52,7 @@ int Epoll::wait(int timeout) {
 std::vector<struct epoll_event> &Epoll::events() { return _events; }
 
 //获取epollfd
-int Epoll::fd() const {
+int Epoll::get_epoll_fd() const {
   if (_epoll_fd < 0) {
     throw std::runtime_error("epoll fd is invalid");
   }

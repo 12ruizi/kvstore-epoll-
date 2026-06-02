@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/kvstore.dir/Webserver.cpp.o"
+  "CMakeFiles/kvstore.dir/Webserver.cpp.o.d"
   "CMakeFiles/kvstore.dir/kv_core/hash.cpp.o"
   "CMakeFiles/kvstore.dir/kv_core/hash.cpp.o.d"
   "CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o"
@@ -15,8 +17,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/kvstore.dir/network/tcp.cpp.o.d"
   "CMakeFiles/kvstore.dir/src/main.cpp.o"
   "CMakeFiles/kvstore.dir/src/main.cpp.o.d"
-  "CMakeFiles/kvstore.dir/src/server.cpp.o"
-  "CMakeFiles/kvstore.dir/src/server.cpp.o.d"
   "CMakeFiles/kvstore.dir/timer/timer.cpp.o"
   "CMakeFiles/kvstore.dir/timer/timer.cpp.o.d"
   "CMakeFiles/kvstore.dir/utils/threads_pool.cpp.o"

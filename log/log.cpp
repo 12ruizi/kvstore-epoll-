@@ -1,16 +1,18 @@
-#include "log.h"
+#include "Log.h"
 #include <stdarg.h>
 #include <string.h>
 #include <sys/time.h>
 #include <time.h>
-kv_log::kv_log() { _used_lines = 0; }
-
+kv_log::kv_log() {
+  _used_lines = 0;
+  kv_log::init("./webserver", LOG_BUFFER_SIZE, SPLIT_LINES);
+  std::cout << "log init success" << std::endl;
+}
 kv_log::~kv_log() {
   if (_fp) {
     fclose(_fp);
   }
 }
-
 bool kv_log::init(const char *file_name, int log_buffer_size, int split_lines) {
   std::lock_guard<std::mutex> lock(log_mutex);
   _max_log_buffer_size = log_buffer_size;
@@ -38,6 +40,7 @@ bool kv_log::init(const char *file_name, int log_buffer_size, int split_lines) {
   _today = my_tm.tm_mday;
   _fp = fopen(log_file_name, "a");
   if (_fp == NULL) {
+    std::cout << "fopen log file failed" << std::endl;
     return false;
   }
 
@@ -51,6 +54,7 @@ void kv_log::write_log(int level, const char *format, ...) {
   struct timeval now = {0, 0};
   gettimeofday(&now, NULL);
   time_t t = now.tv_sec;
+
   struct tm *sys_tm = localtime(&t);
   struct tm my_tm = *sys_tm;
   char lable[16] = {0};
@@ -103,31 +107,31 @@ void kv_log::write_log(int level, const char *format, ...) {
         perror("fopen log file");
         return;
       }
-      va_list valist;
-      va_start(valist, format);
-      std::string log_str;
-
-      int n =
-          snprintf(_buffer, 48, "%d-%02d_%02d %02d:%02d:%02d.%06ld %s",
-                   my_tm.tm_year + 1900, my_tm.tm_mon + 1, my_tm.tm_mday,
-                   my_tm.tm_hour, my_tm.tm_min, my_tm.tm_sec, now.tv_sec, lable
-
-          );
-
-      int m = vsnprintf(_buffer + n, _max_log_buffer_size - 1, format, valist);
-
-      _buffer[n + m] = '\n';
-      _buffer[n + m + 1] = '\0';
-      log_str = _buffer;
-
-#ifdef ASYNC_LOG
-      {
-
-      }
-#else
-      { fputs(log_str.c_str(), _fp); }
-#endif
-      va_end(valist);
     }
+    va_list valist;
+    va_start(valist, format);
+    std::string log_str;
+    // UTC时间小时+8=现在
+    int n =
+        snprintf(_buffer, 48, "%d-%02d_%02d %02d:%02d:%02d.%06ld %s",
+                 my_tm.tm_year + 1900, my_tm.tm_mon + 1, my_tm.tm_mday,
+                 my_tm.tm_hour, my_tm.tm_min, my_tm.tm_sec, now.tv_usec, lable
+
+        );
+
+    int m = vsnprintf(_buffer + n, _max_log_buffer_size - 1, format, valist);
+
+    _buffer[n + m] = '\n';
+    _buffer[n + m + 1] = '\0';
+    log_str = _buffer;
+    { fputs(log_str.c_str(), _fp); }
+    va_end(valist);
   }
 }
+
+void kv_log::flush_log() {
+  std::lock_guard<std::mutex> lock(log_mutex);
+  if (_fp) {
+    fflush(_fp);
+  }
+};

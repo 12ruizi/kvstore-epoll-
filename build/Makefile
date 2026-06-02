@@ -129,6 +129,30 @@ kvstore/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/build
 .PHONY : kvstore/fast
 
+Webserver.o: Webserver.cpp.o
+.PHONY : Webserver.o
+
+# target to build an object file
+Webserver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/Webserver.cpp.o
+.PHONY : Webserver.cpp.o
+
+Webserver.i: Webserver.cpp.i
+.PHONY : Webserver.i
+
+# target to preprocess a source file
+Webserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/Webserver.cpp.i
+.PHONY : Webserver.cpp.i
+
+Webserver.s: Webserver.cpp.s
+.PHONY : Webserver.s
+
+# target to generate assembly for a file
+Webserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/Webserver.cpp.s
+.PHONY : Webserver.cpp.s
+
 kv_core/hash.o: kv_core/hash.cpp.o
 .PHONY : kv_core/hash.o
 
@@ -321,30 +345,6 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/server.o: src/server.cpp.o
-.PHONY : src/server.o
-
-# target to build an object file
-src/server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/server.cpp.o
-.PHONY : src/server.cpp.o
-
-src/server.i: src/server.cpp.i
-.PHONY : src/server.i
-
-# target to preprocess a source file
-src/server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/server.cpp.i
-.PHONY : src/server.cpp.i
-
-src/server.s: src/server.cpp.s
-.PHONY : src/server.s
-
-# target to generate assembly for a file
-src/server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/server.cpp.s
-.PHONY : src/server.cpp.s
-
 timer/timer.o: timer/timer.cpp.o
 .PHONY : timer/timer.o
 
@@ -402,6 +402,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... kvstore"
+	@echo "... Webserver.o"
+	@echo "... Webserver.i"
+	@echo "... Webserver.s"
 	@echo "... kv_core/hash.o"
 	@echo "... kv_core/hash.i"
 	@echo "... kv_core/hash.s"
@@ -426,9 +429,6 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/server.o"
-	@echo "... src/server.i"
-	@echo "... src/server.s"
 	@echo "... timer/timer.o"
 	@echo "... timer/timer.i"
 	@echo "... timer/timer.s"

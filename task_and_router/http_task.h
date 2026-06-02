@@ -36,13 +36,13 @@ void http_task_get1(ConnectionInfo *conn_info) {
   HttpResponse response;
   response.response_line = "HTTP/1.1 200 OK";
   response.body = "<h1>Hello, World!</h1>";
-  send_simple_response(conn_info->fd, response);
+  send_simple_response(conn_info->_fd, response);
   std::cout << "response success" << std::endl;
 };
 void http_task_get2(ConnectionInfo *conn_info) {
   //得到conn_info->read_buffer.get_buffer()中的数据
-  char *wmsg =
-      conn_info->write_buffer.get_buffer() + conn_info->write_buffer.get_tail();
+  char *wmsg = conn_info->_write_buffer.get_buffer() +
+               conn_info->_write_buffer.get_tail();
   std::cout << "wmsg = " << wmsg << std::endl;
   //这个需要只拿到数据部分，不包含协议部分
   char *rmsg_data = conn_info->_request->_data;
@@ -52,7 +52,7 @@ void http_task_get2(ConnectionInfo *conn_info) {
   HttpResponse response;
   response.response_line = "HTTP/1.1 200 OK";
   response.body = "<h1>set success</h1>";
-  send_simple_response(conn_info->fd, response);
+  send_simple_response(conn_info->_fd, response);
   std::cout << "http_task_get2_success" << std::endl;
 }
 

@@ -3,8 +3,8 @@ CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o: \
  /usr/include/stdc-predef.h \
  /home/rui/share/warehouse/1精匠/kvstore/kv_core/kvstore.h \
  /home/rui/share/warehouse/1精匠/kvstore/kv_core/../network/connect_info/connect_info.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/../network/protocol_parser/protocol_parser.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/../network/protocol_parser/../connect_info/Request.h \
+ /home/rui/share/warehouse/1精匠/kvstore/kv_core/../network/protocol_parser/protocol_parser.h \
+ /home/rui/share/warehouse/1精匠/kvstore/kv_core/../network/protocol_parser/../connect_info/Request.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -222,6 +222,8 @@ CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o: \
  /usr/include/c++/11/bits/uses_allocator_args.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
+ /home/rui/share/warehouse/1精匠/kvstore/kv_core/../task_and_router/Router.h \
+ /home/rui/share/warehouse/1精匠/kvstore/kv_core/../task_and_router/../network/connect_info/connect_info.h \
  /home/rui/share/warehouse/1精匠/kvstore/kv_core/../network/connect_info/ring_buffer.h \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
@@ -241,5 +243,5 @@ CMakeFiles/kvstore.dir/kv_core/kvstore.cpp.o: \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/c++/11/atomic \
- /usr/include/assert.h /usr/include/c++/11/stdlib.h /usr/include/string.h \
- /usr/include/strings.h
+ /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
+ /usr/include/assert.h /usr/include/c++/11/stdlib.h

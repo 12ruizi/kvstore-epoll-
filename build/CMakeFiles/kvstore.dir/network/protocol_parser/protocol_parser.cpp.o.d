@@ -223,7 +223,9 @@ CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o: \
  /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/http_task.h \
  /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/../kv_core/kvstore.h \
  /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/../kv_core/../network/connect_info/connect_info.h \
- /home/rui/share/warehouse/1精匠/kvstore/include/../network/protocol_parser/protocol_parser.h \
+ /home/rui/share/warehouse/1精匠/kvstore/kv_core/../network/protocol_parser/protocol_parser.h \
+ /home/rui/share/warehouse/1精匠/kvstore/kv_core/../task_and_router/Router.h \
+ /home/rui/share/warehouse/1精匠/kvstore/kv_core/../task_and_router/../network/connect_info/connect_info.h \
  /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/../kv_core/../network/connect_info/ring_buffer.h \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
@@ -243,8 +245,8 @@ CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o: \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/c++/11/atomic \
- /usr/include/assert.h /usr/include/c++/11/stdlib.h /usr/include/string.h \
- /usr/include/strings.h \
+ /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
+ /usr/include/assert.h /usr/include/c++/11/stdlib.h \
  /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/../network/connect_info/connect_info.h \
  /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/Router.h \
  /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../connect_info/connect_info.h \

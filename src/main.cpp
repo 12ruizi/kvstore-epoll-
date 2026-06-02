@@ -1,9 +1,8 @@
-#include "../include/server.h"
-
+#include "../Webserver.h"
 int main() {
 
-  Server s;
-  s.run();
+  Webserver s;
+  s.EventLoop();
 
   return 0;
 }

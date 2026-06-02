@@ -1,6 +1,4 @@
-#include "../network/tcp.h"
-#include "../utils/memory.h"
-#include "connect_info/connect_info.h"
+#include "tcp.h"
 #include <iostream>
 #include <netinet/in.h>
 #include <stdexcept>
@@ -8,8 +6,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 
-tcp_socket::tcp_socket(int port, size_t conn_blocks, size_t block_size)
-    : _port(port), _socket_fd(-1), _conn_pool(conn_blocks, block_size) {
+tcp_socket::tcp_socket(int port) : _port(port), _socket_fd(-1) {
   if (create() < 0) {
     throw std::runtime_error("tcp socket create failed");
   }
@@ -52,7 +49,7 @@ int tcp_socket::create() {
   return _socket_fd;
 }
 
-int tcp_socket::fd() const {
+int tcp_socket::get_listen_fd() const {
   if (_socket_fd < 0) {
     throw std::runtime_error("tcp socket fd is invalid");
   }
@@ -62,14 +59,10 @@ int tcp_socket::fd() const {
 int tcp_socket::Accept_tcp() {
   struct sockaddr_in addr;
   socklen_t len = sizeof(addr);
-  int conn_fd = accept(fd(), (struct sockaddr *)&addr, &len);
+  int conn_fd = accept(get_listen_fd(), (struct sockaddr *)&addr, &len);
   if (conn_fd < 0) {
     perror("Accept_tcp");
     return -1;
   }
-  auto conn_info = _conn_pool.acquire();
-  conn_info->fd = conn_fd;
-  conn_info->addr = addr;
-  _conn_pool.add_map(conn_fd, conn_info);
-  return conn_info->fd;
+  return conn_fd;
 }
