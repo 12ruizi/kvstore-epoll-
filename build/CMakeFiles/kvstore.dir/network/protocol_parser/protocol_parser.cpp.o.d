@@ -222,11 +222,18 @@ CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o: \
  /usr/include/c++/11/pstl/execution_defs.h \
  /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/http_task.h \
  /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/../kv_core/kvstore.h \
- /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/../kv_core/../network/connect_info/connect_info.h \
+ /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/../kv_core/../log/Log.h \
+ /usr/include/c++/11/mutex /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
+ /usr/include/c++/11/bits/unique_lock.h /usr/include/assert.h \
+ /usr/include/c++/11/stdlib.h /usr/include/string.h \
+ /usr/include/strings.h \
+ /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/../network/connect_info/connect_info.h \
  /home/rui/share/warehouse/1精匠/kvstore/kv_core/../network/protocol_parser/protocol_parser.h \
  /home/rui/share/warehouse/1精匠/kvstore/kv_core/../task_and_router/Router.h \
  /home/rui/share/warehouse/1精匠/kvstore/kv_core/../task_and_router/../network/connect_info/connect_info.h \
- /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/../kv_core/../network/connect_info/ring_buffer.h \
+ /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/../network/connect_info/ring_buffer.h \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -245,10 +252,33 @@ CMakeFiles/kvstore.dir/network/protocol_parser/protocol_parser.cpp.o: \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/c++/11/atomic \
- /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
- /usr/include/assert.h /usr/include/c++/11/stdlib.h \
- /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/../network/connect_info/connect_info.h \
+ /usr/include/c++/11/cstring \
  /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../../task_and_router/Router.h \
+ /home/rui/share/warehouse/1精匠/kvstore/kv_core/../network/epoll.h \
+ /usr/include/c++/11/cassert /usr/include/signal.h \
+ /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+ /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+ /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+ /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+ /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+ /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+ /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+ /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
+ /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+ /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+ /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
+ /usr/include/x86_64-linux-gnu/sys/epoll.h \
+ /usr/include/x86_64-linux-gnu/bits/epoll.h \
  /home/rui/share/warehouse/1精匠/kvstore/network/protocol_parser/../connect_info/connect_info.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/ranges_algo.h \
  /usr/include/c++/11/bits/ranges_util.h \

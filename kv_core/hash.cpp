@@ -4,14 +4,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #define MAX_KEY_LEN 128
 #define MAX_VALUE_LEN 512
 #define MAX_TABLE_SIZE 102400
+#ifdef ENABLE_POINTER_KEY
+
 typedef struct hashnode_s {
   char *key;
   char *value;
   struct hashnode_s *next;
 } hashnode_t;
+
+#else
+
+typedef struct hashnode_s {
+  char key[MAX_KEY_LEN];
+  char value[MAX_VALUE_LEN];
+  struct hashnode_s *next;
+} hashnode_t;
+
+#endif
 
 typedef struct hashtable_s {
   hashnode_t **nodes;
@@ -43,14 +56,14 @@ hashnode_t *_create_node(char *key, char *value) {
 
 #if ENABLE_POINTER_KEY
 
-  node->key = kvstore_malloc(strlen(key) + 1);
+  node->key = (char *)kvstore_malloc(strlen(key) + 1);
   if (!node->key) {
     kvstore_free(node);
     return NULL;
   }
   strcpy(node->key, key);
 
-  node->value = kvstore_malloc(strlen(value) + 1);
+  node->value = (char *)kvstore_malloc(strlen(value) + 1);
   if (!node->value) {
     kvstore_free(node->key);
     kvstore_free(node);
@@ -183,7 +196,7 @@ int delete_kv_hashtable(hashtable_t *hash, char *key) {
     }
     kvstore_free(head);
 #else
-    free(head);
+    kvstore_free(head);
 #endif
     hash->count--;
 
@@ -214,7 +227,7 @@ int delete_kv_hashtable(hashtable_t *hash, char *key) {
   }
   kvstore_free(tmp);
 #else
-  free(tmp);
+  kvstore_free(tmp);
 #endif
   hash->count--;
 
@@ -280,3 +293,86 @@ int kvs_hash_modify(hashtable_t *hash, char *key, char *value) {
 }
 
 int kvs_hash_count(hashtable_t *hash) { return hash->count; }
+// Save hash table to disk
+int save_to_disk(hashtable_t *hash, const char *filename) {
+  if (!hash || !filename) {
+    printf("save_to_disk: Invalid parameters\n");
+    return -1;
+  }
+
+  printf("save_to_disk: Attempting to save to file '%s'\n", filename);
+  FILE *fp = fopen(filename, "w");
+  if (!fp) {
+    printf("save_to_disk: Error opening file '%s' for writing\n", filename);
+    perror("perror");
+    return -1;
+  }
+
+  int count = 0;
+  // Iterate through all buckets in the hash table
+  for (int i = 0; i < hash->max_slots; i++) {
+    hashnode_t *node = hash->nodes[i];
+    while (node) {
+      // Write key-value pair to file
+      fprintf(fp, "%s:%s\n", node->key, node->value);
+      node = node->next;
+      count++;
+    }
+  }
+
+  printf("save_to_disk: Successfully saved %d key-value pairs to '%s'\n", count,
+         filename);
+  fclose(fp);
+  return 0;
+}
+
+// Load hash table from disk
+int load_from_disk(hashtable_t *hash, const char *filename) {
+  if (!hash || !filename) {
+    printf("load_from_disk: Invalid parameters\n");
+    return -1;
+  }
+
+  printf("load_from_disk: Attempting to load from file '%s'\n", filename);
+
+  // Check if file exists
+  if (access(filename, F_OK) == -1) {
+    // File doesn't exist, that's OK
+    printf("load_from_disk: File '%s' does not exist, skipping load\n",
+           filename);
+    return 0;
+  }
+
+  FILE *fp = fopen(filename, "r");
+  if (!fp) {
+    printf("load_from_disk: Error opening file '%s' for reading\n", filename);
+    perror("perror");
+    return -1;
+  }
+
+  int count = 0;
+  char line[BUFFER_LENGTH];
+  while (fgets(line, sizeof(line), fp)) {
+    // Remove trailing newline
+    line[strcspn(line, "\n")] = 0;
+
+    // Find the delimiter
+    char *delimiter = strchr(line, ':');
+    if (delimiter) {
+      *delimiter = '\0';
+      char *key = line;
+      char *value = delimiter + 1;
+
+      // Insert into hash table
+      int result = put_kv_hashtable(hash, key, value);
+      if (result >= 0) {
+        count++;
+      }
+    }
+  }
+
+  printf("load_from_disk: Successfully loaded %d key-value pairs from '%s'\n",
+         count, filename);
+  fclose(fp);
+  return 0;
+}

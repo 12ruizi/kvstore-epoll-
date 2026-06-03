@@ -82,6 +82,19 @@ int kvstore_parser_protocol(char *wmsg, char **tokens, int count) {
   memset(wmsg, 0, BUFFER_LENGTH);
   switch (cmd) {
   // hash
+  case KVS_CMD_HSET: {
+
+    int res = kvstore_hash_set(key, value);
+    if (res < 0) { // server
+      snprintf(wmsg, BUFFER_LENGTH, "%s", "ERROR");
+    } else if (res == 0) {
+      snprintf(wmsg, BUFFER_LENGTH, "%s", "SUCCESS");
+    } else {
+      snprintf(wmsg, BUFFER_LENGTH, "EXISTS");
+    }
+
+    break;
+  }
   case KVS_CMD_HGET: {
 
     char *val = kvstore_hash_get(key);
@@ -148,6 +161,13 @@ int kvstore_request(char *rmsg, char *wmsg) {
   return 0;
 }
 
-void init_kvengine(void) { kvstore_hash_create(&Hash); }
-
-void exit_kvengine(void) { kvstore_hash_destory(&Hash); }
+void init_kvengine(void) {
+  kvstore_hash_create(&Hash);
+  // Load existing data from disk
+  load_from_disk(&Hash, "kvstore_data.db");
+}
+void exit_kvengine(void) {
+  // Save data to disk before exiting
+  save_to_disk(&Hash, "kvstore_data.db");
+  kvstore_hash_destory(&Hash);
+}

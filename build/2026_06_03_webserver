@@ -1,0 +1,64 @@
+2026-06_03 08:44:03.884737 [info]: server start
+2026-06_03 08:44:11.964867 [info]: add_timer conn fd: 6
+2026-06_03 08:44:11.965961 [info]: deal_Read conn fd: 6
+2026-06_03 08:44:11.966376 [info]: mod_timer conn fd: 6
+2026-06_03 08:44:21.965777 [error]: conn fd: 6 timeout
+2026-06_03 08:44:21.966003 [info]: close conn fd: 6
+2026-06_03 08:46:39.091183 [info]: server start
+2026-06_03 08:46:45.472548 [info]: add_timer conn fd: 6
+2026-06_03 08:46:45.472662 [info]: deal_Read conn fd: 6
+2026-06_03 08:46:45.472889 [info]: mod_timer conn fd: 6
+2026-06_03 08:46:55.473336 [error]: conn fd: 6 timeout
+2026-06_03 08:46:55.474195 [info]: close conn fd: 6
+2026-06_03 09:03:51.452786 [info]: server start
+2026-06_03 09:03:54.126960 [info]: add_timer conn fd: 6
+2026-06_03 09:03:54.127214 [info]: deal_Read conn fd: 6
+2026-06_03 09:03:54.127512 [info]: mod_timer conn fd: 6
+2026-06_03 09:04:04.127655 [error]: conn fd: 6 timeout
+2026-06_03 09:04:04.127825 [info]: close conn fd: 6
+2026-06_03 09:10:33.448835 [info]: server start
+2026-06_03 09:10:36.595193 [info]: add_timer conn fd: 6
+2026-06_03 09:10:36.595276 [info]: deal_Read conn fd: 6
+2026-06_03 09:10:36.595586 [info]: mod_timer conn fd: 6
+2026-06_03 09:14:52.118696 [info]: server start
+2026-06_03 09:14:56.958692 [info]: add_timer conn fd: 6
+2026-06_03 09:14:56.958751 [info]: deal_Read conn fd: 6
+2026-06_03 09:14:56.959320 [info]: mod_timer conn fd: 6
+2026-06_03 09:15:06.959345 [error]: conn fd: 6 timeout
+2026-06_03 09:15:06.959608 [info]: close conn fd: 6
+2026-06_03 09:18:40.844996 [info]: server start
+2026-06_03 09:18:45.349692 [info]: add_timer conn fd: 6
+2026-06_03 09:18:45.349785 [info]: deal_Read conn fd: 6
+2026-06_03 09:18:45.350035 [info]: mod_timer conn fd: 6
+2026-06_03 09:18:55.350699 [error]: conn fd: 6 timeout
+2026-06_03 09:18:55.350976 [info]: close conn fd: 6
+2026-06_03 11:32:10.603067 [info]: server start
+2026-06_03 11:32:17.202030 [info]: add_timer conn fd: 8
+2026-06_03 11:32:17.202114 [info]: deal_Read conn fd: 8
+2026-06_03 11:32:17.202334 [info]: mod_timer conn fd: 8
+2026-06_03 11:32:27.202909 [error]: conn fd: 8 timeout
+2026-06_03 11:32:27.203140 [info]: close conn fd: 8
+2026-06_03 11:35:27.914923 [info]: server start
+2026-06_03 11:35:43.157879 [info]: add_timer conn fd: 8
+2026-06_03 11:35:43.157967 [info]: deal_Read conn fd: 8
+2026-06_03 11:35:43.158288 [info]: mod_timer conn fd: 8
+2026-06_03 11:35:53.158347 [error]: conn fd: 8 timeout
+2026-06_03 11:35:53.158426 [info]: close conn fd: 8
+2026-06_03 11:38:18.076137 [info]: server start
+2026-06_03 11:38:29.943361 [info]: add_timer conn fd: 8
+2026-06_03 11:38:29.943578 [info]: deal_Read conn fd: 8
+2026-06_03 11:38:29.944015 [info]: mod_timer conn fd: 8
+2026-06_03 11:38:30.943775 [error]: conn fd: 8 timeout
+2026-06_03 11:38:30.943957 [info]: close conn fd: 8
+2026-06_03 11:47:52.176902 [info]: server start
+2026-06_03 11:48:00.909941 [info]: add_timer conn fd: 8
+2026-06_03 11:48:00.910027 [info]: deal_Read conn fd: 8
+2026-06_03 11:48:00.910505 [info]: mod_timer conn fd: 8
+2026-06_03 11:48:01.910490 [error]: conn fd: 8 timeout
+2026-06_03 11:48:01.910653 [info]: close conn fd: 8
+2026-06_03 11:49:21.604551 [info]: server start
+2026-06_03 11:49:30.519205 [info]: add_timer conn fd: 8
+2026-06_03 11:49:30.519365 [info]: deal_Read conn fd: 8
+2026-06_03 11:49:30.520130 [info]: mod_timer conn fd: 8
+2026-06_03 11:49:31.519615 [error]: conn fd: 8 timeout
+2026-06_03 11:49:31.519813 [info]: close conn fd: 8

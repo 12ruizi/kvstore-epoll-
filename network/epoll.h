@@ -1,13 +1,14 @@
 #ifndef __EPOLL_H__
 #define __EPOLL_H__
+#include <cassert>
+#include <cstring>
 #include <iostream>
+#include <signal.h>
 #include <stdexcept>
 #include <sys/epoll.h>
 #include <unistd.h>
 #include <vector>
-
 //考虑设置哪些对外的api接口
-
 class Epoll {
 private:
   int _epoll_fd;
@@ -15,6 +16,7 @@ private:
   std::vector<struct epoll_event> _events;
 
 public:
+  static int *_pipe_fd;
   Epoll(int max_events);
   ~Epoll();
   Epoll(const Epoll &) = delete;
@@ -31,5 +33,6 @@ public:
   std::vector<struct epoll_event> &events();
   //获取epollfd
   int get_epoll_fd() const;
+  void add_sig(int signal, void(handler)(int), bool one_shot);
 };
 #endif

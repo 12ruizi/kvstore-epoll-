@@ -1,10 +1,12 @@
 #include "epoll.h"
+#include <cassert>
+#include <cstring>
 #include <iostream>
 #include <stdexcept>
 #include <sys/epoll.h>
+#include <sys/socket.h>
 #include <unistd.h>
 #include <vector>
-
 //考虑设置哪些对外的api接口
 
 Epoll::Epoll(int max_events)

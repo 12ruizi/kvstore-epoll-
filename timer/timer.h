@@ -41,6 +41,7 @@ private:
   std::condition_variable _cond_timer;
   std::thread _timer_thread;
   std::mutex _mutex; //互斥锁
+  bool _stop_flag;   // 添加停止标志
 
   //处理快要到时间点的定时器
   void handle_timer();
@@ -56,7 +57,9 @@ public:
   //删除定时器
   bool del_timer(int timer_id);
   Thread_clockr();
-  ~Thread_clockr();
+  ~Thread_clockr(
+
+  );
 };
 //底层是最小堆，那么让一个线程去做 每次添加定时器加锁
 #endif

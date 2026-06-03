@@ -38,7 +38,7 @@ public:
   int read() {
     int ret =
         recv(_fd, _read_buffer.get_buffer(), _read_buffer.not_useSize(), 0);
-    if (ret < 0) {
+    if (ret <= 0) {
       perror("read");
       return ret;
     }
